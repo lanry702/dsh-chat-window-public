@@ -1,0 +1,11 @@
+# Chat Focus — the chat as its own surface.
+#
+# Clicking the Chat entry in the sidebar (registered by chat-in-dsh) raises a
+# frame-wide overlay that covers the whole shell, with the web chat filling it.
+# Escape, or the close button, puts you back where you were.
+#
+# Host half is a no-op: the overlay is pure client UI, and /webchat is already
+# served by chat-in-dsh's host route.
+- insert:
+    - id: chat-focus
+      name: '@local/dsh-chat-focus'

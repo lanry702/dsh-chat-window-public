@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "Chat window",
+    "description": "Picking Chat in the sidebar opens the conversation in a window of its own, with this icon on the taskbar instead of the harness's.",
+    "detail": "docs/DETAIL.md"
+  }
+}

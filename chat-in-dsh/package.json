@@ -1,0 +1,59 @@
+{
+  "name": "chat-in-dsh",
+  "version": "0.5.2",
+  "type": "module",
+  "description": "在 DeepSeek Harness 里加一个和网页版一模一样的对话面板：官方 chat-demo 界面，用 DSH 的账户凭据，不需要填 API Key。",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YinkaiYu/chat-in-dsh.git"
+  },
+  "homepage": "https://github.com/YinkaiYu/chat-in-dsh#readme",
+  "bugs": {
+    "url": "https://github.com/YinkaiYu/chat-in-dsh/issues"
+  },
+  "keywords": [
+    "deepseek",
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "chat",
+    "chat-ui",
+    "webview"
+  ],
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "src",
+    "webview/dist",
+    "webview/brand-mark.svg",
+    "locale",
+    "icon.svg"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ]
+    }
+  },
+  "scripts": {
+    "test": "node --test test/protocol.test.js test/dsh-import.test.js",
+    "build:webview": "pwsh scripts/build-webview.ps1"
+  },
+  "engines": {
+    "node": ">=22.12"
+  }
+}

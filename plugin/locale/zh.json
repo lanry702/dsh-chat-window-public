@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "聊天窗口",
+    "description": "点侧栏的 Chat，对话在单独的窗口里打开，任务栏上是这个图标，不再是 harness 的。",
+    "detail": "docs/DETAIL.md"
+  }
+}

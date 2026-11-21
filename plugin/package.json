@@ -1,0 +1,37 @@
+{
+  "name": "@local/dsh-chat-focus",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Open the chat in a window of its own, with its own icon on the taskbar. Needs chat-in-dsh for the chat itself.",
+  "license": "MIT",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.png"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "icon-apply.ps1",
+    "icon.png",
+    "icon-32.png",
+    "favicon.ico",
+    "locale",
+    "docs"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-layout"
+      ]
+    }
+  }
+}
